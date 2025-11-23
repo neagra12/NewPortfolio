@@ -87,7 +87,7 @@ function Portfolio() {
       fullDescription:
         'A full-stack web application that allows users to write and execute data visualization scripts in either Python or R, supporting static, interactive, and 3D plots. It dynamically executes the script in Docker-isolated environments and displays the rendered output (via iframe) in the frontend.',
       tags: ['React', 'TypeScript', 'FastAPI', 'Docker', 'Matplotlib', 'Plotly', 'ggplot2'],
-      image: '/langviz.png',
+      image: '/Langviz.png',
       link: 'https://github.com/neagra12/LanguageAgnosticWebApp',
       color: 'cyan'
     },
