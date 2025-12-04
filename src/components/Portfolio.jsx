@@ -81,6 +81,36 @@ function Portfolio() {
       color: 'emerald'
     },
     {
+      title: 'PriceWatch',
+      subtitle: 'Electronics Price Comparison',
+      description: 'Multi-retailer price comparison platform tracking laptops, headphones, and monitors with real-time data.',
+      fullDescription: 'Built a full-stack price comparison platform that aggregates product data from Best Buy, Amazon, and Newegg. Features include automated web scraping, price history tracking, multi-retailer comparison, and a modern responsive UI. Uses Next.js 15 with App Router, PostgreSQL for data persistence, and Prisma ORM for type-safe database operations.',
+      tags: ['Web Scraping','Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma', 'Tailwind CSS'],
+      image: '/pricewatch.png', 
+      link: 'https://pricewatch-pi.vercel.app/',
+      color: 'violet'
+    },
+    {
+      title: 'TrendWatch AI',
+      subtitle: 'GitHub Trending Intelligence Platform',
+      description:  'AI-powered newsletter system delivering personalized GitHub trending digests with automated daily emails and smart summaries.',
+      fullDescription:  'Built a full-stack SaaS application that scrapes trending GitHub repositories daily, generates AI-powered summaries using OpenAI, and delivers personalized email digests to subscribers. Features include automated cron jobs, subscription management, multi-language filtering, beautiful gradient email templates, and unsubscribe functionality. Uses Next.js 15 with App Router, PostgreSQL for data persistence, Prisma ORM for type-safe database operations, and serverless functions for automation.',
+      tags: ['AI Integration', 'Next.js 15', 'TypeScript', 'OpenAI API', 'PostgreSQL', 'Prisma', 'Serverless', 'Email Automation', 'Tailwind CSS'],
+      image: '/twai.png',
+      link: 'https://github-trending-digest.vercel.app/',
+      color: 'emerald'
+    },
+    {
+      title: 'SmartCart Recommender System',
+      subtitle: 'ML-Powered E-Commerce Personalization',
+      description: 'Personalized product recommendation system achieving 120.9% CTR improvement through machine learning and A/B testing.',
+      fullDescription: 'An end-to-end machine learning recommendation system that personalizes e-commerce product suggestions based on user behavior and purchase history. Implemented three algorithms (Collaborative Filtering, Content-Based, and Hybrid) and validated performance through rigorous A/B testing with 5,000 users. Features interactive Power BI dashboards visualizing KPIs, user engagement metrics, and statistical significance testing results. Achieved 16.30% precision@10 and statistically significant CTR improvement (p < 0.001).',
+      tags: ['Statistical Analysis','Python', 'Scikit-learn', 'SQL', 'Power BI', 'A/B Testing', 'Machine Learning', 'Pandas'],
+      image: 'sc.png',
+      link: 'https://github.com/neagra12/smartcart-recommender',
+      color: 'violet'
+    },
+    {
       title: 'Language Agnostic Visualization',
       subtitle: 'Full-Stack Web App',
       description: 'Execute data visualization scripts in Python or R with Docker isolation.',
@@ -265,11 +295,11 @@ function Portfolio() {
     },
     {
       degree: 'High School Diploma',
-      school: 'St. Xavier\'s High School',
+      university: 'St. Xavier\'s High School',
       location: 'Ahmedabad, Gujarat, India',
       period: 'June 2008 - May 2020',
       gpa: 'GPA: 4.0/4.0'
-    }
+    },
   ];
 
   const skills = [
