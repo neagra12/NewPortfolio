@@ -69,6 +69,18 @@ function Portfolio() {
 
   const projects = [
     {
+      title: 'VoiceLegal AI',
+      subtitle: 'Smart Legal Document Voice Assistant',
+      description:
+        'Chrome extension with AI-powered analysis and voice assistant for instant legal document understanding - no downloads needed.',
+      fullDescription:
+        'Built a three-part solution combining a Chrome extension, AI analysis engine, and voice assistant to make legal documents accessible. The extension automatically detects legal pages (terms, privacy policies, contracts) and provides instant risk assessment powered by Google Gemini 2.0 Flash. Features conversational AI via ElevenLabs for hands-free Q&A, structured risk categorization (HIGH/MEDIUM/LOW), and works seamlessly across any website. Achieves 4.8x faster analysis compared to traditional AI platforms by eliminating context switching and manual uploads.',
+      tags: ['Chrome Extension', 'Google Vertex AI', 'FastAPI', 'ElevenLabs', 'React', 'Tailwind CSS', 'Docker'],
+      image: '/voicelegal.png',
+      link: 'https://voicelegal-ai-web-extension.vercel.app/',
+      color: 'violet'
+    },
+    {
       title: 'Hoosier Helper',
       subtitle: 'AI Campus Assistant',
       description:
