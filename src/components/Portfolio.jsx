@@ -78,7 +78,7 @@ function Portfolio() {
       fullDescription:
     'Built a sophisticated three-feature clinical AI orchestration system that processes fragmented medical records from multiple sources. The system employs 18+ specialized Gemini 2.0 agents working in parallel to: (1) intelligently fuse data from labs, imaging, visit notes, and discharge summaries using temporal analysis to detect causal relationships (e.g., "ER medication → Lab abnormality"), (2) generate complete SOAP notes with ICD-10/CPT billing codes from 30-second physician dictations, and (3) autonomously create referral letters, schedule follow-ups, and draft patient communications. Achieves true orchestration through async parallel processing, multi-step conditional workflows, and state management across documents - demonstrating the "Action Era" of AI beyond simple prompt wrappers.',
       tags: ['Google Gemini 2.0', 'Python', 'Streamlit', 'Async Processing', 'FastAPI', 'Healthcare AI', 'Multi-Agent System'],
-      image: '/docweaver.jpg',
+      image: '/docweaver.jpeg',
       link: 'https://youtu.be/vzvPgJDEwkU',
       color: 'emerald'
 },
