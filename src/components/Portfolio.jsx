@@ -503,7 +503,7 @@ function Portfolio() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
-  onClick={() => window.open('/Neeha-Resume.pdf', '_blank')}
+  onClick={() => window.open('NeehaAgrawal-Resume.pdf', '_blank')}
   className="px-8 py-4 border border-white/20 rounded-full font-semibold hover:bg-white/5 transition-all flex items-center gap-2"
 >
   <Download className="w-5 h-5" /> Resume
