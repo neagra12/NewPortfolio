@@ -69,6 +69,19 @@ function Portfolio() {
 
   const projects = [
     {
+  title: 'IRIS',
+  subtitle: 'Intelligent Retail & Ingredient Scanner',
+  badge: 'Claude Hackathon @ IU',
+  description:
+  'AI-powered grocery assistant that transforms lab reports into real-time, personalized food decisions using vision, voice, and LLMs.',
+  fullDescription:
+  'Built an end-to-end multi-modal AI system that bridges personal health data with real-world decision-making in grocery environments. IRIS processes uploaded lab reports to extract key health markers such as cholesterol, blood sugar, deficiencies, and allergies, creating a dynamic health profile. Using real-time camera input, the system analyzes product labels with Claude Vision and evaluates them against the user’s health data to generate personalized Safe / Caution / Avoid verdicts with clear reasoning. The experience is enhanced with low-latency voice feedback via ElevenLabs, enabling hands-free interaction while shopping. Beyond single-product analysis, IRIS tracks the entire cart to provide a holistic health impact summary and suggests smarter alternatives instantly. It also includes budget-aware meal planning aligned with health goals. The system demonstrates full-stack AI orchestration combining LLM reasoning, computer vision, and voice interfaces with robust backend pipelines handling unstructured inputs (PDFs, images) and real-time decision workflows.',
+  tags: ['Claude (Anthropic)', 'Computer Vision', 'LLMs', 'React', 'Node.js', 'Express', 'ElevenLabs', 'AI Engineering', 'Full-Stack AI'],
+  image: '/iris.png',
+  link: 'https://youtu.be/0iLcWrAg5fA',
+  color: 'violet'
+},
+    {
     
       title: 'DocWeaver',
       subtitle: 'AI-Powered Clinical Documentation Orchestrator',
@@ -576,7 +589,7 @@ function Portfolio() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               <p>
-                My journey into technology began with an insatiable curiosity—one that turned
+                My journey into technology began with an insatiable curiosity - one that turned
                 into a relentless drive to build, innovate, and solve problems. Growing up, I
                 was captivated by intelligent systems, inspired by movies like{' '}
                 <span className="text-white font-semibold">Iron Man</span> and{' '}
@@ -594,7 +607,7 @@ function Portfolio() {
 
             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
               <p>
-                For me, technology isn&apos;t just about writing code—it&apos;s about crafting
+                For me, technology isn&apos;t just about writing code - it&apos;s about crafting
                 solutions that make an impact. Whether it&apos;s optimizing algorithms,
                 designing user-friendly applications, or harnessing AI for real-world
                 challenges, I thrive at the intersection of{' '}
