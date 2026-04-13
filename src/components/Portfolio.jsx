@@ -129,7 +129,7 @@ function Portfolio() {
     ],
     image: '/bb.png', // You may want to update this with your actual image path (e.g., from the screenshots folder)
     link: 'https://lambent-cheesecake-2ded1e.netlify.app/',
-    color: 'orange' // Changed to orange to fit the basketball/Skechers vibe, feel free to adjust to your portfolio's theme
+    color: 'emerald' // Changed to orange to fit the basketball/Skechers vibe, feel free to adjust to your portfolio's theme
   },
 
     {
