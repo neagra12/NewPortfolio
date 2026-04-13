@@ -108,6 +108,30 @@ function Portfolio() {
       link: 'https://voicelegal-ai-web-extension.vercel.app/',
       color: 'violet'
     },
+      {
+    title: 'NBA Win Probability Model',
+    subtitle: 'Real-Time Game State Intelligence',
+    badge: 'Sports Analytics & ML',
+    description:
+      'Predictive modeling platform that calculates live NBA win probabilities to optimize in-game advertising, sponsorship activations, and business decisions.',
+    fullDescription:
+      'Developed an end-to-end machine learning pipeline to predict real-time NBA win probabilities using dynamic game states like score differential and time remaining. Overcoming data scraping limitations, the system incorporates a custom Brownian bridge synthetic data generator rigorously calibrated to real NBA margin-of-victory distributions. The predictive engine leverages XGBoost alongside Logistic Regression, capturing complex non-linear urgency dynamics to achieve highly calibrated results (Log Loss: 0.503, ROC-AUC: 0.816). To translate these insights into actionable business value, I built a multi-platform visualization suite: a responsive React and Recharts dashboard for live game-state monitoring, an interactive Streamlit application for deep model analysis, and a comprehensive Power BI dashboard for stakeholder reporting. The project demonstrates a complete data workflow—from feature engineering to production-ready UI—empowering partnerships teams to trigger targeted digital advertisements and in-stadium engagements during high-leverage sports moments.',
+    tags: [
+      'Python',
+      'XGBoost',
+      'scikit-learn',
+      'React',
+      'Streamlit',
+      'Power BI',
+      'Machine Learning',
+      'Data Science',
+      'Predictive Modeling'
+    ],
+    image: '/bb.png', // You may want to update this with your actual image path (e.g., from the screenshots folder)
+    link: 'https://lambent-cheesecake-2ded1e.netlify.app/',
+    color: 'orange' // Changed to orange to fit the basketball/Skechers vibe, feel free to adjust to your portfolio's theme
+  },
+
     {
       title: 'Hoosier Helper',
       subtitle: 'AI Campus Assistant',
