@@ -5,6 +5,7 @@ import {
   Github,
   Linkedin,
   Mail,
+  Phone,
   ChevronDown,
   ExternalLink,
   Award,
@@ -22,6 +23,7 @@ function Portfolio() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [selectedProject, setSelectedProject] = useState(null);
+  const [contactOpen, setContactOpen] = useState(false);
   const [flippedCard, setFlippedCard] = useState(null);
 
   useEffect(() => {
@@ -69,33 +71,33 @@ function Portfolio() {
 
   const projects = [
     {
-  title: 'IRIS',
-  subtitle: 'Intelligent Retail & Ingredient Scanner',
-  badge: 'Claude Hackathon @ IU',
-  description:
-  'AI-powered grocery assistant that transforms lab reports into real-time, personalized food decisions using vision, voice, and LLMs.',
-  fullDescription:
-  'Built an end-to-end multi-modal AI system that bridges personal health data with real-world decision-making in grocery environments. IRIS processes uploaded lab reports to extract key health markers such as cholesterol, blood sugar, deficiencies, and allergies, creating a dynamic health profile. Using real-time camera input, the system analyzes product labels with Claude Vision and evaluates them against the user’s health data to generate personalized Safe / Caution / Avoid verdicts with clear reasoning. The experience is enhanced with low-latency voice feedback via ElevenLabs, enabling hands-free interaction while shopping. Beyond single-product analysis, IRIS tracks the entire cart to provide a holistic health impact summary and suggests smarter alternatives instantly. It also includes budget-aware meal planning aligned with health goals. The system demonstrates full-stack AI orchestration combining LLM reasoning, computer vision, and voice interfaces with robust backend pipelines handling unstructured inputs (PDFs, images) and real-time decision workflows.',
-  tags: ['Claude (Anthropic)', 'Computer Vision', 'LLMs', 'React', 'Node.js', 'Express', 'ElevenLabs', 'AI Engineering', 'Full-Stack AI'],
-  image: '/iris.png',
-  link: 'https://youtu.be/0iLcWrAg5fA',
-  color: 'violet'
-},
+      title: 'IRIS',
+      subtitle: 'Intelligent Retail & Ingredient Scanner',
+      badge: 'Claude Hackathon @ IU',
+      description:
+        'AI-powered grocery assistant that transforms lab reports into real-time, personalized food decisions using vision, voice, and LLMs.',
+      fullDescription:
+        'Built an end-to-end multi-modal AI system that bridges personal health data with real-world decision-making in grocery environments. IRIS processes uploaded lab reports to extract key health markers such as cholesterol, blood sugar, deficiencies, and allergies, creating a dynamic health profile. Using real-time camera input, the system analyzes product labels with Claude Vision and evaluates them against the user’s health data to generate personalized Safe / Caution / Avoid verdicts with clear reasoning. The experience is enhanced with low-latency voice feedback via ElevenLabs, enabling hands-free interaction while shopping. Beyond single-product analysis, IRIS tracks the entire cart to provide a holistic health impact summary and suggests smarter alternatives instantly. It also includes budget-aware meal planning aligned with health goals. The system demonstrates full-stack AI orchestration combining LLM reasoning, computer vision, and voice interfaces with robust backend pipelines handling unstructured inputs (PDFs, images) and real-time decision workflows.',
+      tags: ['Claude (Anthropic)', 'Computer Vision', 'LLMs', 'React', 'Node.js', 'Express', 'ElevenLabs', 'AI Engineering', 'Full-Stack AI'],
+      image: '/iris.png',
+      link: 'https://youtu.be/0iLcWrAg5fA',
+      color: 'violet'
+    },
     {
-    
+
       title: 'DocWeaver',
       subtitle: 'AI-Powered Clinical Documentation Orchestrator',
       badge: 'Gemini 3 Hackathon',
       description:
-    'Multi-agent system using Gemini 2.0 for intelligent medical document fusion, automated clinical documentation, and care coordination - saving physicians 45+ minutes per patient.',
+        'Multi-agent system using Gemini 2.0 for intelligent medical document fusion, automated clinical documentation, and care coordination - saving physicians 45+ minutes per patient.',
       fullDescription:
-    'Built a sophisticated three-feature clinical AI orchestration system that processes fragmented medical records from multiple sources. The system employs 18+ specialized Gemini 2.0 agents working in parallel to: (1) intelligently fuse data from labs, imaging, visit notes, and discharge summaries using temporal analysis to detect causal relationships (e.g., "ER medication → Lab abnormality"), (2) generate complete SOAP notes with ICD-10/CPT billing codes from 30-second physician dictations, and (3) autonomously create referral letters, schedule follow-ups, and draft patient communications. Achieves true orchestration through async parallel processing, multi-step conditional workflows, and state management across documents - demonstrating the "Action Era" of AI beyond simple prompt wrappers.',
+        'Built a sophisticated three-feature clinical AI orchestration system that processes fragmented medical records from multiple sources. The system employs 18+ specialized Gemini 2.0 agents working in parallel to: (1) intelligently fuse data from labs, imaging, visit notes, and discharge summaries using temporal analysis to detect causal relationships (e.g., "ER medication → Lab abnormality"), (2) generate complete SOAP notes with ICD-10/CPT billing codes from 30-second physician dictations, and (3) autonomously create referral letters, schedule follow-ups, and draft patient communications. Achieves true orchestration through async parallel processing, multi-step conditional workflows, and state management across documents - demonstrating the "Action Era" of AI beyond simple prompt wrappers.',
       tags: ['Google Gemini 2.0', 'Python', 'Streamlit', 'Async Processing', 'FastAPI', 'Healthcare AI', 'Multi-Agent System'],
       image: '/docweaver.jpeg',
       link: 'https://youtu.be/vzvPgJDEwkU',
       color: 'emerald'
-},
-  
+    },
+
     {
       title: 'VoiceLegal AI',
       subtitle: 'Smart Legal Document Voice Assistant',
@@ -108,29 +110,29 @@ function Portfolio() {
       link: 'https://voicelegal-ai-web-extension.vercel.app/',
       color: 'violet'
     },
-      {
-    title: 'NBA Win Probability Model',
-    subtitle: 'Real-Time Game State Intelligence',
-    badge: 'Sports Analytics & ML',
-    description:
-      'Predictive modeling platform that calculates live NBA win probabilities to optimize in-game advertising, sponsorship activations, and business decisions.',
-    fullDescription:
-      'Developed an end-to-end machine learning pipeline to predict real-time NBA win probabilities using dynamic game states like score differential and time remaining. Overcoming data scraping limitations, the system incorporates a custom Brownian bridge synthetic data generator rigorously calibrated to real NBA margin-of-victory distributions. The predictive engine leverages XGBoost alongside Logistic Regression, capturing complex non-linear urgency dynamics to achieve highly calibrated results (Log Loss: 0.503, ROC-AUC: 0.816). To translate these insights into actionable business value, I built a multi-platform visualization suite: a responsive React and Recharts dashboard for live game-state monitoring, an interactive Streamlit application for deep model analysis, and a comprehensive Power BI dashboard for stakeholder reporting. The project demonstrates a complete data workflow—from feature engineering to production-ready UI—empowering partnerships teams to trigger targeted digital advertisements and in-stadium engagements during high-leverage sports moments.',
-    tags: [
-      'Python',
-      'XGBoost',
-      'scikit-learn',
-      'React',
-      'Streamlit',
-      'Power BI',
-      'Machine Learning',
-      'Data Science',
-      'Predictive Modeling'
-    ],
-    image: '/bb.png', // You may want to update this with your actual image path (e.g., from the screenshots folder)
-    link: 'https://lambent-cheesecake-2ded1e.netlify.app/',
-    color: 'emerald' // Changed to orange to fit the basketball/Skechers vibe, feel free to adjust to your portfolio's theme
-  },
+    {
+      title: 'NBA Win Probability Model',
+      subtitle: 'Real-Time Game State Intelligence',
+      badge: 'Sports Analytics & ML',
+      description:
+        'Predictive modeling platform that calculates live NBA win probabilities to optimize in-game advertising, sponsorship activations, and business decisions.',
+      fullDescription:
+        'Developed an end-to-end machine learning pipeline to predict real-time NBA win probabilities using dynamic game states like score differential and time remaining. Overcoming data scraping limitations, the system incorporates a custom Brownian bridge synthetic data generator rigorously calibrated to real NBA margin-of-victory distributions. The predictive engine leverages XGBoost alongside Logistic Regression, capturing complex non-linear urgency dynamics to achieve highly calibrated results (Log Loss: 0.503, ROC-AUC: 0.816). To translate these insights into actionable business value, I built a multi-platform visualization suite: a responsive React and Recharts dashboard for live game-state monitoring, an interactive Streamlit application for deep model analysis, and a comprehensive Power BI dashboard for stakeholder reporting. The project demonstrates a complete data workflow—from feature engineering to production-ready UI—empowering partnerships teams to trigger targeted digital advertisements and in-stadium engagements during high-leverage sports moments.',
+      tags: [
+        'Python',
+        'XGBoost',
+        'scikit-learn',
+        'React',
+        'Streamlit',
+        'Power BI',
+        'Machine Learning',
+        'Data Science',
+        'Predictive Modeling'
+      ],
+      image: '/bb.png', // You may want to update this with your actual image path (e.g., from the screenshots folder)
+      link: 'https://lambent-cheesecake-2ded1e.netlify.app/',
+      color: 'emerald' // Changed to orange to fit the basketball/Skechers vibe, feel free to adjust to your portfolio's theme
+    },
 
     {
       title: 'Hoosier Helper',
@@ -149,16 +151,16 @@ function Portfolio() {
       subtitle: 'Electronics Price Comparison',
       description: 'Multi-retailer price comparison platform tracking laptops, headphones, and monitors with real-time data.',
       fullDescription: 'Built a full-stack price comparison platform that aggregates product data from Best Buy, Amazon, and Newegg. Features include automated web scraping, price history tracking, multi-retailer comparison, and a modern responsive UI. Uses Next.js 15 with App Router, PostgreSQL for data persistence, and Prisma ORM for type-safe database operations.',
-      tags: ['Web Scraping','Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma', 'Tailwind CSS'],
-      image: '/pricewatch.png', 
+      tags: ['Web Scraping', 'Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma', 'Tailwind CSS'],
+      image: '/pricewatch.png',
       link: 'https://pricewatch-pi.vercel.app/',
       color: 'violet'
     },
     {
       title: 'TrendWatch AI',
       subtitle: 'GitHub Trending Intelligence Platform',
-      description:  'AI-powered newsletter system delivering personalized GitHub trending digests with automated daily emails and smart summaries.',
-      fullDescription:  'Built a full-stack SaaS application that scrapes trending GitHub repositories daily, generates AI-powered summaries using OpenAI, and delivers personalized email digests to subscribers. Features include automated cron jobs, subscription management, multi-language filtering, beautiful gradient email templates, and unsubscribe functionality. Uses Next.js 15 with App Router, PostgreSQL for data persistence, Prisma ORM for type-safe database operations, and serverless functions for automation.',
+      description: 'AI-powered newsletter system delivering personalized GitHub trending digests with automated daily emails and smart summaries.',
+      fullDescription: 'Built a full-stack SaaS application that scrapes trending GitHub repositories daily, generates AI-powered summaries using OpenAI, and delivers personalized email digests to subscribers. Features include automated cron jobs, subscription management, multi-language filtering, beautiful gradient email templates, and unsubscribe functionality. Uses Next.js 15 with App Router, PostgreSQL for data persistence, Prisma ORM for type-safe database operations, and serverless functions for automation.',
       tags: ['AI Integration', 'Next.js 15', 'TypeScript', 'OpenAI API', 'PostgreSQL', 'Prisma', 'Serverless', 'Email Automation', 'Tailwind CSS'],
       image: '/twai.png',
       link: 'https://github-trending-digest.vercel.app/',
@@ -169,7 +171,7 @@ function Portfolio() {
       subtitle: 'ML-Powered E-Commerce Personalization',
       description: 'Personalized product recommendation system achieving 120.9% CTR improvement through machine learning and A/B testing.',
       fullDescription: 'An end-to-end machine learning recommendation system that personalizes e-commerce product suggestions based on user behavior and purchase history. Implemented three algorithms (Collaborative Filtering, Content-Based, and Hybrid) and validated performance through rigorous A/B testing with 5,000 users. Features interactive Power BI dashboards visualizing KPIs, user engagement metrics, and statistical significance testing results. Achieved 16.30% precision@10 and statistically significant CTR improvement (p < 0.001).',
-      tags: ['Statistical Analysis','Python', 'Scikit-learn', 'SQL', 'Power BI', 'A/B Testing', 'Machine Learning', 'Pandas'],
+      tags: ['Statistical Analysis', 'Python', 'Scikit-learn', 'SQL', 'Power BI', 'A/B Testing', 'Machine Learning', 'Pandas'],
       image: 'sc.png',
       link: 'https://github.com/neagra12/smartcart-recommender',
       color: 'violet'
@@ -312,7 +314,7 @@ function Portfolio() {
         'Developed assignments and labs focused on agile methodologies'
       ],
       icon: <Award className="w-6 h-6" />
-      
+
     },
     {
       role: 'Data Science & Analytics Intern',
@@ -431,11 +433,10 @@ function Portfolio() {
 
       {/* NAVBAR */}
       <nav
-        className={`fixed w-full z-50 transition-all duration-500 ${
-          scrolled
-            ? 'bg-black/80 backdrop-blur-xl border-b border-white/5'
-            : 'bg-transparent'
-        }`}
+        className={`fixed w-full z-50 transition-all duration-500 ${scrolled
+          ? 'bg-black/80 backdrop-blur-xl border-b border-white/5'
+          : 'bg-transparent'
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
@@ -447,22 +448,21 @@ function Portfolio() {
                   <button
                     key={section}
                     onClick={() => scrollToSection(section)}
-                    className={`px-4 py-2 rounded-full capitalize transition-all ${
-                      activeSection === section
-                        ? 'bg-white/10 text-white'
-                        : 'text-gray-400 hover:text-white hover:bg-white/5'
-                    }`}
+                    className={`px-4 py-2 rounded-full capitalize transition-all ${activeSection === section
+                      ? 'bg-white/10 text-white'
+                      : 'text-gray-400 hover:text-white hover:bg-white/5'
+                      }`}
                   >
                     {section}
                   </button>
                 )
               )}
               <button
-  onClick={() => scrollToSection('footer')}
-  className="ml-4 px-6 py-2 bg-white text-black rounded-full font-medium hover:bg-gray-200 transition-all"
->
-  Contact
-</button>
+                onClick={() => setContactOpen(true)}
+                className="ml-4 px-6 py-2 bg-white text-black rounded-full font-medium hover:bg-gray-200 transition-all"
+              >
+                Contact
+              </button>
 
 
             </div>
@@ -490,6 +490,15 @@ function Portfolio() {
                   </button>
                 )
               )}
+              <button
+                onClick={() => {
+                  setMenuOpen(false);
+                  setContactOpen(true);
+                }}
+                className="block w-full text-left capitalize py-3 px-4 rounded-lg hover:bg-white/5 transition-colors"
+              >
+                Contact
+              </button>
             </div>
           </div>
         )}
@@ -540,11 +549,11 @@ function Portfolio() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
-  onClick={() => window.open('NeehaAgrawal-Resume.pdf', '_blank')}
-  className="px-8 py-4 border border-white/20 rounded-full font-semibold hover:bg-white/5 transition-all flex items-center gap-2"
->
-  <Download className="w-5 h-5" /> Resume
-</button>
+                onClick={() => window.open('NeehaAgrawal-Resume.pdf', '_blank')}
+                className="px-8 py-4 border border-white/20 rounded-full font-semibold hover:bg-white/5 transition-all flex items-center gap-2"
+              >
+                <Download className="w-5 h-5" /> Resume
+              </button>
 
             </div>
 
@@ -566,7 +575,7 @@ function Portfolio() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="mailto:neagra@iu.edu"
+                href="mailto:neehaj12@gmail.com"
                 className="w-12 h-12 border border-white/20 rounded-full flex items-center justify-center hover:border-white hover:bg-white/5 transition-all"
               >
                 <Mail className="w-5 h-5" />
@@ -711,9 +720,8 @@ function Portfolio() {
             {experiences.map((exp, idx) => (
               <div
                 key={idx}
-                className={`flip-card cursor-pointer ${
-                  flippedCard === idx ? 'flipped' : ''
-                }`}
+                className={`flip-card cursor-pointer ${flippedCard === idx ? 'flipped' : ''
+                  }`}
                 onClick={() =>
                   setFlippedCard(flippedCard === idx ? null : idx)
                 }
@@ -818,24 +826,24 @@ function Portfolio() {
                   </div>
 
                   <div className="flex items-center justify-between text-xs">
-  <div className="flex items-center gap-2 text-gray-500 group-hover:text-white transition-colors">
-    <span>Click to learn more</span>
-    <ExternalLink className="w-3 h-3" />
-  </div>
+                    <div className="flex items-center gap-2 text-gray-500 group-hover:text-white transition-colors">
+                      <span>Click to learn more</span>
+                      <ExternalLink className="w-3 h-3" />
+                    </div>
 
-  {/* Hide "View Project" for last 2 projects */}
-  {idx < projects.length - 2 && (
-    <a
-      href={project.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={(e) => e.stopPropagation()}
-      className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 transition-colors font-semibold"
-    >
-      View Project →
-    </a>
-  )}
-</div>
+                    {/* Hide "View Project" for last 2 projects */}
+                    {idx < projects.length - 2 && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                        className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 transition-colors font-semibold"
+                      >
+                        View Project →
+                      </a>
+                    )}
+                  </div>
 
                 </div>
               </button>
@@ -1044,7 +1052,7 @@ function Portfolio() {
       </section>
 
       {/* FOOTER */}
-      <footer id="footer"className="border-t border-white/5 py-12">
+      <footer id="footer" className="border-t border-white/5 py-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-500">
@@ -1068,7 +1076,7 @@ function Portfolio() {
                 LinkedIn
               </a>
               <a
-                href="mailto:neagra@iu.edu"
+                href="mailto:neehaj12@gmail.com"
                 className="text-gray-500 hover:text-white transition-colors"
               >
                 Email
@@ -1077,6 +1085,70 @@ function Portfolio() {
           </div>
         </div>
       </footer>
+
+      {contactOpen && (
+        <div
+          className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-6"
+          onClick={() => setContactOpen(false)}
+        >
+          <div
+            className="relative bg-black border border-white/20 rounded-2xl max-w-md w-full p-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setContactOpen(false)}
+              className="absolute top-4 right-4 w-10 h-10 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 transition-all"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            <h3 className="text-2xl font-bold mb-6 gradient-text">Get in Touch</h3>
+
+            <div className="space-y-4">
+              <a
+                href="mailto:neehaj12@gmail.com"
+                className="flex items-center gap-4 p-4 bg-white/[0.02] border border-white/10 rounded-xl hover:bg-white/[0.05] hover:border-white/20 transition-all"
+              >
+                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                  <Mail className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-sm text-gray-500">Email</div>
+                  <div className="text-white">neehaj12@gmail.com</div>
+                </div>
+              </a>
+
+              <a
+                href="tel:+17347540430"
+                className="flex items-center gap-4 p-4 bg-white/[0.02] border border-white/10 rounded-xl hover:bg-white/[0.05] hover:border-white/20 transition-all"
+              >
+                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                  <Phone className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-sm text-gray-500">Phone</div>
+                  <div className="text-white">+1 (734) 754-0430</div>
+                </div>
+              </a>
+
+              <a
+                href="https://linkedin.com/in/neeha-agrawal"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 bg-white/[0.02] border border-white/10 rounded-xl hover:bg-white/[0.05] hover:border-white/20 transition-all"
+              >
+                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center shrink-0">
+                  <Linkedin className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="text-sm text-gray-500">LinkedIn</div>
+                  <div className="text-white">linkedin.com/in/neeha-agrawal</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
